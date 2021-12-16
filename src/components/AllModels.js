@@ -16,9 +16,15 @@ function AllModels() {
         fetch('https://fabrik-backend.herokuapp.com/')
             .then(res => res.json())
             .then(data => {
-                setModels(data);
+                if(data.error){
+                    setError(data.error);
+                setLoading(false);
+                    
+                }else{
+                    setModels(data);
                 setSelectedModel(data[0])
                 setLoading(false);
+                }
             })
             .catch(err=>{
                 setError(err.message);

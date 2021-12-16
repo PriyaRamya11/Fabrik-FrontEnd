@@ -13,7 +13,7 @@ function AllModels() {
 
     //  lifecycle method whenever any side effect happens in the component
     useEffect(() => {
-        fetch('https://fabrik-backend.herokuapp.com/')
+        fetch('https://backend-api-priya.herokuapp.com/')
             .then(res => res.json())
             .then(data => {
                 if(data.error){

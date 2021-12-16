@@ -31,7 +31,7 @@ function UploadModel() {
         body.append('title', title);
         body.append('upload', upload);
         
-        fetch('https://fabrik-backend.herokuapp.com/', {
+        fetch('https://backend-api-priya.herokuapp.com/', {
             method : 'POST',
             body : body
         })

@@ -12,7 +12,8 @@ function IndividualModel(props) {
 
         //  using gltf loader to load the 3-d model 
         const loader = new GLTFLoader()
-        loader.load(props.modal.filename, function(glb) {
+        
+        loader.load(`https://backend-api-priya.herokuapp.com${props.modal.filename}`, function(glb) {
             console.log(glb);
             const root = glb.scene;
             root.scale.set(10,10,10);

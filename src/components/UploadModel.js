@@ -31,7 +31,7 @@ function UploadModel() {
         body.append('title', title);
         body.append('upload', upload);
         
-        fetch('http://localhost:8000', {
+        fetch('https://fabrik-backend.herokuapp.com/', {
             method : 'POST',
             body : body
         })
